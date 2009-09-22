@@ -5,7 +5,7 @@ require 'fileutils'
 if RUBY_PLATFORM =~ /darwin/
   require File.join(File.dirname(__FILE__), 'mac_tools')
 elsif RUBY_PLATFORM =~ /linux/i
-  require File.join(File.dirname(__FILE__), 'linux_tool')
+  require File.join(File.dirname(__FILE__), 'linux_tools')
 else
   raise "Unsupported platform! Currently RChest support only Mac OS X and Linux"
 end
@@ -42,9 +42,11 @@ class RChest
       
       Dir.chdir box.root
       FileUtils.chown_R box.user, box.group, '.', :verbose => true
+      gid = Etc.getgrnam(box.group).gid
+      uid = Etc.getpwnam(box.user).uid
       Dir.chroot box.root
-      Process::Sys.setuid(Etc.getpwnam(box.user).uid)
-      Process::Sys.setgid(Etc.getgrnam(box.group).gid)
+      Process::Sys.setgid(gid)
+      Process::Sys.setuid(uid)
     end
     
     private
