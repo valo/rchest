@@ -1,5 +1,5 @@
-RChest is a ruby tool for making running programs in chroot easier
-==================================================================
+RChest is a ruby tool for configuring and running chroot jails easily
+=====================================================================
 
 The idea is to define a chroot environments into a configuration file using a specialized DSL, then to configure the chroot and to run it.
 
