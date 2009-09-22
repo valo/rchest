@@ -1,20 +1,20 @@
 RChest is a ruby tool for making running programs in chroot easier
-------------------------------------------------------------------
+==================================================================
 
 The idea is to define a chroot environments into a configuration file using a specialized DSL, then to configure the chroot and to run it.
 
 Installation
-============
+------------
 
 To be added
 
 Supported OS
-============
+------------
 
 Currently this is tested only on Mac OS X 10.6 and ubuntu linux. If someone try to use it on mac or linux and it is not working, please drop me a line.
 
 Examples
-========
+--------
 
 Create a new ruby script and drop this there
 
