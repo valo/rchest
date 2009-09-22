@@ -11,7 +11,7 @@ To be added
 Supported OS
 ============
 
-Currently this is tested only on Mac OS X 10.6. Support for linux is planned.
+Currently this is tested only on Mac OS X 10.6 and ubuntu linux. If someone try to use it on mac or linux and it is not working, please drop me a line.
 
 Examples
 ========
