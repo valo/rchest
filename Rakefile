@@ -3,17 +3,16 @@ require 'rake'
 require 'set'
 require 'etc'
 
-require 'chroot_config'
-
-namespace :chroot do
-  desc "Configure chroot"
-  task :configure do
-    RChest.configure(ENV['NAME'])
+begin
+  require 'jeweler'
+  Jeweler::Tasks.new do |gemspec|
+    gemspec.name = "rchest"
+    gemspec.summary = "A small lib for running setting-up chroot environments easily"
+    gemspec.description = "A small lib for running setting-up chroot environments easily"
+    gemspec.email = "valentin.mihov@gmail.com"
+    gemspec.homepage = "http://github.com/valo/rchest"
+    gemspec.authors = ["Valentin Mihov"]
   end
-  
-  desc "Run an executable in the chroot environment"
-  task :run do
-    RChest.chroot(ENV['NAME'])
-    exec ENV['CMD']
-  end
+rescue LoadError
+  puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"
 end
