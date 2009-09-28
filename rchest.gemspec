@@ -22,7 +22,8 @@ Gem::Specification.new do |s|
      "chroot_config.rb",
      "lib/linux_tools.rb",
      "lib/mac_tools.rb",
-     "lib/rchest.rb"
+     "lib/rchest.rb",
+     "rchest.gemspec"
   ]
   s.homepage = %q{http://github.com/valo/rchest}
   s.rdoc_options = ["--charset=UTF-8"]
