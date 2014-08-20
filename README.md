@@ -18,18 +18,22 @@ Examples
 
 Create a new ruby script and drop this there
 
-    require 'rchest'
+```ruby
+require 'rchest'
     
-    chroot_folder :ruby_box do
-      root '/home/valentinmihov/workspace/sandbox'
-      user 'valentinmihov'
-      group 'valentinmihov
-      executables ['/usr/bin/ruby', '/usr/bin/irb', '/bin/ls']
-    end
+chroot_folder :ruby_box do
+  root '/home/valentinmihov/workspace/sandbox'
+  user 'valentinmihov'
+  group 'valentinmihov
+  executables ['/usr/bin/ruby', '/usr/bin/irb', '/bin/ls']
+end
+```
   
 After that configure the chroot with
-  
-    rake chroot:configure NAME=ruby_box
+
+```bash
+rake chroot:configure NAME=ruby_box
+```
     
 This is going to copy all the necessary files in order to run the executables into the chroot root directory
   
