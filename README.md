@@ -24,7 +24,7 @@ require 'rchest'
 chroot_folder :ruby_box do
   root '/home/valentinmihov/workspace/sandbox'
   user 'valentinmihov'
-  group 'valentinmihov
+  group 'valentinmihov'
   executables ['/usr/bin/ruby', '/usr/bin/irb', '/bin/ls']
 end
 ```
