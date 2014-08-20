@@ -43,19 +43,21 @@ And run a command in the chroot
   
 Another way is to directly invoke the RChest:
 
-    require 'rchest'
+```ruby
+require 'rchest'
     
-    chroot_folder :bash_box do
-      root '/home/valentinmihov/workspace/sandbox'
-      user 'valentinmihov'
-      group 'valentinmihov
-      executables ['/bin/bash']
-    end
+chroot_folder :bash_box do
+  root '/home/valentinmihov/workspace/sandbox'
+  user 'valentinmihov'
+  group 'valentinmihov
+  executables ['/bin/bash']
+end
     
-    RChest.configure(:bash_box)
-    RChest.chroot(:bash_box)
+RChest.configure(:bash_box)
+RChest.chroot(:bash_box)
     
-    exec '/bin/bash'
+exec '/bin/bash'
+```
     
 This example is going to configure a chroot environment in '/home/valentinmihov/workspace/sandbox', chroot with the specified user and group and start a bash shell.
 
