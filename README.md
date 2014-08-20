@@ -49,7 +49,7 @@ require 'rchest'
 chroot_folder :bash_box do
   root '/home/valentinmihov/workspace/sandbox'
   user 'valentinmihov'
-  group 'valentinmihov
+  group 'valentinmihov'
   executables ['/bin/bash']
 end
     
